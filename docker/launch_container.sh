@@ -15,6 +15,6 @@ docker run -it --rm \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.docker.xauth:/tmp/.docker.xauth:rw \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
- -v $(pwd):/root/sml \
+    -v $(pwd)/ros2_ws:/root/ros2_ws \
     idim:v1
 
