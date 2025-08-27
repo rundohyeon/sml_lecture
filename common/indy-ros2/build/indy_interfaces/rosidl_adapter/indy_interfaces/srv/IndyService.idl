@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from indy_interfaces/srv/IndyService.srv
+// generated code does not contain a copyright notice
+
+
+module indy_interfaces {
+  module srv {
+    struct IndyService_Request {
+      int32 data;
+    };
+    struct IndyService_Response {
+      @verbatim (language="comment", text=
+        "indicate successful run of service")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "informational")
+      string message;
+    };
+  };
+};

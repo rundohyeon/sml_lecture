@@ -16,5 +16,6 @@ docker run -it --rm \
     -v /tmp/.docker.xauth:/tmp/.docker.xauth:rw \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $(pwd)/ros2_ws:/root/ros2_ws \
+    -v $(pwd)/common:/root/common \
     idim:v1
 

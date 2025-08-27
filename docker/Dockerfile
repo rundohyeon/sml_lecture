@@ -126,12 +126,47 @@ RUN apt update && \
 RUN pip install -U pip && \
     pip install -U jinja2 typeguard
 
+RUN pip install neuromeka
+RUN pip install --upgrade neuromeka
+
+
 RUN mkdir -p ~/ros2_ws/src && \
     cd ~/ros2_ws && \
     rosdep update && \
     # rosdep init && \
     rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-6.0.1 urdfdom_headers" && \
     colcon build --symlink-install
+
+RUN apt install -q -y \
+    rospack-tools \
+    python3-colcon-mixin
+    
+RUN colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+RUN colcon mixin update default
+RUN apt install python3-vcstool
+
+RUN apt update
+RUN apt install -q -y \
+    ros-humble-xacro \
+    ros-humble-moveit \
+    ros-humble-moveit-servo \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-moveit-ros-move-group \
+    ros-humble-moveit-planners-ompl \
+    ros-humble-moveit-kinematics \
+    ros-humble-gazebo-ros \
+    ros-humble-gazebo-ros2-control \
+    ros-humble-controller-manager \
+    ros-humble-joint-state-broadcaster \
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-joint-trajectory-controller \
+    ros-humble-moveit-ros-perception \
+    ros-humble-rviz-visual-tools \
+    ros-humble-moveit-visual-tools \
+    ros-humble-moveit-resources
+
+RUN apt install -y ros-humble-rmw-cyclonedds-cpp
 
 
 RUN echo 'source /root/ros2_ws/install/setup.bash' >> ~/.bashrc
@@ -144,9 +179,15 @@ RUN /bin/bash -c "source /etc/bash.bashrc" && \
 
 WORKDIR /root/ros2_ws/src
 
+RUN apt update
+
+RUN apt install -y python-is-python3
+RUN pip install squaternion
+RUN pip install transforms3d
+
 
 RUN echo 'export PS1="\[\e[0;33m\]idim \W \$ \[\e[0m\]"' >> /root/.bashrc
-
+RUN echo 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp'
 # RUN apt update && apt install -y ros-humble-turtlesim
 
 ENTRYPOINT ["/bin/bash"]

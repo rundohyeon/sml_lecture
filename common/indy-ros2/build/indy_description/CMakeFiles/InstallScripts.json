@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/root/common/indy-ros2/build/indy_description/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

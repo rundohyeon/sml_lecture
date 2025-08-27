@@ -1,0 +1,9 @@
+{
+  "package_name": "indy_interfaces",
+  "non_idl_tuples": [
+    "/root/common/indy-ros2/src/sml_indy-ros2/indy_interfaces:srv/IndyService.srv",
+    "/root/common/indy-ros2/src/sml_indy-ros2/indy_interfaces:msg/ServoTx.msg",
+    "/root/common/indy-ros2/src/sml_indy-ros2/indy_interfaces:msg/ServoRx.msg",
+    "/root/common/indy-ros2/src/sml_indy-ros2/indy_interfaces:msg/ServoDataArray.msg"
+  ]
+}

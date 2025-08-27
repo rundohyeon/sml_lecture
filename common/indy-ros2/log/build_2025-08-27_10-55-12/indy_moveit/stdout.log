@@ -1,0 +1,94 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+-- Found FastRTPS: /opt/ros/humble/include
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)
+-- Found moveit_msgs: 2.2.1 (/opt/ros/humble/share/moveit_msgs/cmake)
+-- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Configuring done (2.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/common/indy-ros2/build/indy_moveit
+Built target ament_cmake_python_copy_indy_moveit
+running egg_info
+creating indy_moveit.egg-info
+writing indy_moveit.egg-info/PKG-INFO
+writing dependency_links to indy_moveit.egg-info/dependency_links.txt
+writing top-level names to indy_moveit.egg-info/top_level.txt
+writing manifest file 'indy_moveit.egg-info/SOURCES.txt'
+reading manifest file 'indy_moveit.egg-info/SOURCES.txt'
+writing manifest file 'indy_moveit.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_indy_moveit_egg
+-- Install configuration: ""
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/moveit.launch.py
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/indy_moveit_real_robot.launch.py
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/indy_moveit_gazebo.launch.py
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/controllers_6dof.yaml
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/ompl_planning.yaml
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/controllers_7dof.yaml
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/indy_servo.yaml
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/kinematics.yaml
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config/indy_moveit.rviz
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config/indy_servo.rviz
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf/indy.srdf.xacro
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf/indy_macro.srdf.xacro
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/pythonpath.sh
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/pythonpath.dsv
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/__init__.py
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/launch_common.py
+Listing '/root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit'...
+Compiling '/root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/__init__.py'...
+Compiling '/root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/launch_common.py'...
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/launch_common.py
+Compiling '/root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/launch_common.py'...
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/package_run_dependencies/indy_moveit
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/parent_prefix_path/indy_moveit
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/ament_prefix_path.sh
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/ament_prefix_path.dsv
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/path.sh
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/path.dsv
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.bash
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.sh
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.zsh
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.dsv
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/package.dsv
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/packages/indy_moveit
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/cmake/indy_moveitConfig.cmake
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/cmake/indy_moveitConfig-version.cmake
+-- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/package.xml
