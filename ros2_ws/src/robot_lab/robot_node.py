@@ -48,16 +48,16 @@ class robotNode(Node):
         self.sendCommand('initialize')
 
         # # movej rel
-        self.sendCommand("movej", 'rel', [-90.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+        #self.sendCommand("movej", 'rel', [-90.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
 
         # # movej abs
-        self.sendCommand("movej", 'abs', [90.0, -25.0, 0.0, 115.0, 0.0, 90.0, 0.0])
+        # self.sendCommand("movej", 'abs', [90.0, -25.0, 0.0, 115.0, 0.0, 90.0, 0.0])
 
         # # movel rel
-        self.sendCommand("movel", 'tool', [0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+        #self.sendCommand("movel", 'tool', [0.01, 0.0, 0.0, 0.0, 0.0, 0.0])
 
         # # movel abs
-        self.sendCommand("movel", 'base', [0.166, -0.460, 0.480, 0.0, 180.0, 90])
+        # self.sendCommand("movel", 'base', [0.166, -0.460, 0.480, 0.0, 180.0, 90])
 
 
 

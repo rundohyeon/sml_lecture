@@ -4,3 +4,9 @@ indy_interfaces.egg-info/PKG-INFO
 indy_interfaces.egg-info/SOURCES.txt
 indy_interfaces.egg-info/dependency_links.txt
 indy_interfaces.egg-info/top_level.txt
+indy_interfaces/msg/__init__.py
+indy_interfaces/msg/_servo_data_array.py
+indy_interfaces/msg/_servo_rx.py
+indy_interfaces/msg/_servo_tx.py
+indy_interfaces/srv/__init__.py
+indy_interfaces/srv/_indy_service.py

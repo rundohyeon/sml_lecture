@@ -185,6 +185,9 @@ RUN apt install -y python-is-python3
 RUN pip install squaternion
 RUN pip install transforms3d
 
+RUN apt remove -y python3-transforms3d
+RUN python3 -m pip install -U transforms3d
+
 
 RUN echo 'export PS1="\[\e[0;33m\]idim \W \$ \[\e[0m\]"' >> /root/.bashrc
 RUN echo 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp'
