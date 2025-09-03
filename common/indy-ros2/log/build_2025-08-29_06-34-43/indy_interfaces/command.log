@@ -1,0 +1,2 @@
+Invoking command in '/root/common/indy-ros2/build/indy_interfaces': /usr/bin/cmake --build /root/common/indy-ros2/build/indy_interfaces -- -j4 -l4
+Invoked command in '/root/common/indy-ros2/build/indy_interfaces' returned '2': /usr/bin/cmake --build /root/common/indy-ros2/build/indy_interfaces -- -j4 -l4

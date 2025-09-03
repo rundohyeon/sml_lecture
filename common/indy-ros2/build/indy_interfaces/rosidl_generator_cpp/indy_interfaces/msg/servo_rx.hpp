@@ -7,5 +7,6 @@
 #include "indy_interfaces/msg/detail/servo_rx__struct.hpp"
 #include "indy_interfaces/msg/detail/servo_rx__builder.hpp"
 #include "indy_interfaces/msg/detail/servo_rx__traits.hpp"
+#include "indy_interfaces/msg/detail/servo_rx__type_support.hpp"
 
 #endif  // INDY_INTERFACES__MSG__SERVO_RX_HPP_

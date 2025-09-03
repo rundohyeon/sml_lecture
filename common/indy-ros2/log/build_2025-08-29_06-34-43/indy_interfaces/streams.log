@@ -1,0 +1,43 @@
+[0.073s] Invoking command in '/root/common/indy-ros2/build/indy_interfaces': /usr/bin/cmake --build /root/common/indy-ros2/build/indy_interfaces -- -j4 -l4
+[0.322s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.322s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.323s]   CMake.
+[0.323s] 
+[0.323s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.324s]   to tell CMake that the project requires at least <min> but has been updated
+[0.324s]   to work with policies introduced by <max> or earlier.
+[0.325s] 
+[0.325s] [0m
+[0.961s] -- The C compiler identification is GNU 11.4.0
+[1.501s] -- The CXX compiler identification is GNU 11.4.0
+[1.540s] -- Detecting C compiler ABI info
+[1.757s] -- Detecting C compiler ABI info - done
+[1.815s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.819s] -- Detecting C compile features
+[1.822s] -- Detecting C compile features - done
+[1.870s] -- Detecting CXX compiler ABI info
+[2.142s] -- Detecting CXX compiler ABI info - done
+[2.204s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.205s] -- Detecting CXX compile features
+[2.208s] -- Detecting CXX compile features - done
+[2.239s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.652s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[2.744s] Traceback (most recent call last):
+[2.744s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[2.745s]     from ament_package.templates import get_environment_hook_template_path
+[2.745s] ModuleNotFoundError: No module named 'ament_package'
+[2.767s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[2.768s]   execute_process(/usr/bin/python3
+[2.768s]   /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[2.769s]   /root/common/indy-ros2/build/indy_interfaces/ament_cmake_package_templates/templates.cmake)
+[2.769s]   returned error code 1
+[2.769s] Call Stack (most recent call first):
+[2.770s]   /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[2.770s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[2.771s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[2.771s]   CMakeLists.txt:9 (find_package)
+[2.771s] 
+[2.772s] [0m
+[2.772s] -- Configuring incomplete, errors occurred!
+[2.780s] gmake: *** [Makefile:1395: cmake_check_build_system] Error 1
+[2.789s] Invoked command in '/root/common/indy-ros2/build/indy_interfaces' returned '2': /usr/bin/cmake --build /root/common/indy-ros2/build/indy_interfaces -- -j4 -l4

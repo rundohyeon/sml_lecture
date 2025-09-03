@@ -1,0 +1,1 @@
+Invoking command in '/root/common/indy-ros2/build/indy_description': /usr/bin/cmake --build /root/common/indy-ros2/build/indy_description -- -j4 -l4

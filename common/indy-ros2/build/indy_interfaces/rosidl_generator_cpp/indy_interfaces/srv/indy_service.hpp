@@ -7,5 +7,6 @@
 #include "indy_interfaces/srv/detail/indy_service__struct.hpp"
 #include "indy_interfaces/srv/detail/indy_service__builder.hpp"
 #include "indy_interfaces/srv/detail/indy_service__traits.hpp"
+#include "indy_interfaces/srv/detail/indy_service__type_support.hpp"
 
 #endif  // INDY_INTERFACES__SRV__INDY_SERVICE_HPP_
