@@ -1,0 +1,4 @@
+Invoking command in '/root/common/indy-ros2/build/indy_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_interfaces -- -j12 -l12
+Invoked command in '/root/common/indy-ros2/build/indy_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_interfaces -- -j12 -l12
+Invoking command in '/root/common/indy-ros2/build/indy_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_interfaces
+Invoked command in '/root/common/indy-ros2/build/indy_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_interfaces

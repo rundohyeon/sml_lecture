@@ -1,0 +1,25 @@
+[0.015s] Invoking command in '/root/common/indy-ros2/build/indy_gazebo': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_gazebo -- -j12 -l12
+[0.030s] Invoked command in '/root/common/indy-ros2/build/indy_gazebo' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_gazebo -- -j12 -l12
+[0.048s] Invoking command in '/root/common/indy-ros2/build/indy_gazebo': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_gazebo
+[0.052s] -- Install configuration: ""
+[0.052s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch
+[0.052s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch/indy_gazebo.launch.py
+[0.052s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller
+[0.052s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_7dof.yaml
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_6dof.yaml
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/package_run_dependencies/indy_gazebo
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/parent_prefix_path/indy_gazebo
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.sh
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.dsv
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.sh
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.dsv
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.bash
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.sh
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.zsh
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.dsv
+[0.053s] -- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.dsv
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/packages/indy_gazebo
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig.cmake
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig-version.cmake
+[0.053s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.xml
+[0.055s] Invoked command in '/root/common/indy-ros2/build/indy_gazebo' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_gazebo

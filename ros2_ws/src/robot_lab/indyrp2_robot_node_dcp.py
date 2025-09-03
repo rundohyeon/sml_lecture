@@ -104,8 +104,11 @@ class IndyRP2Node(Node):
 
     def move_joints(self, joints: list, absolute):
         '''
-            [6,] float list in degree
+            [7,] float list in degree
             ex. [90.0, -25.0, 0.0, 115.0, 0.0, 90.0, 0.0]
+            ex. [100.0, -25.0, 0.0, 115.0, 0.0, 90.0, 0.0]
+            
+            ex. [10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         '''
         if absolute == 'abs':
             self.indy.movej(joints)
