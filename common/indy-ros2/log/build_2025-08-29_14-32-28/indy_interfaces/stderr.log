@@ -1,4 +1,0 @@
-gmake[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libpython3.10.so', needed by 'rosidl_generator_py/indy_interfaces/libindy_interfaces__rosidl_generator_py.so'.  Stop.
-gmake[2]: *** Waiting for unfinished jobs....
-gmake[1]: *** [CMakeFiles/Makefile2:475: CMakeFiles/indy_interfaces__rosidl_generator_py.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

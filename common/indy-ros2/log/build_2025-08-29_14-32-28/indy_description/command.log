@@ -1,4 +1,0 @@
-Invoking command in '/root/common/indy-ros2/build/indy_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_description -- -j4 -l4
-Invoked command in '/root/common/indy-ros2/build/indy_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_description -- -j4 -l4
-Invoking command in '/root/common/indy-ros2/build/indy_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_description
-Invoked command in '/root/common/indy-ros2/build/indy_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_description

@@ -1,1 +1,0 @@
-launch;launch_ros;joint_state_broadcaster;robot_state_publisher;controller_manager;gazebo_ros2_control;gazebo_ros;rviz2;urdf;xacro;indy_description

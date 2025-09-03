@@ -182,6 +182,7 @@ RUN apt update
 RUN apt install -y python-is-python3
 RUN pip install squaternion
 RUN pip install transforms3d
+RUN pip install zmq
 
 RUN apt remove -y python3-transforms3d
 RUN python3 -m pip install -U transforms3d
