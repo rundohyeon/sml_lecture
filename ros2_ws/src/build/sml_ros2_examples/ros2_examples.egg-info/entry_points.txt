@@ -1,0 +1,6 @@
+[console_scripts]
+service_client = ros2_examples.service_client:main
+service_server = ros2_examples.service_server:main
+topic_publish = ros2_examples.topic_publish:main
+topic_subscribe = ros2_examples.topic_subscribe:main
+

@@ -1,0 +1,23 @@
+[2.075s] Invoking command in '/root/ros2_ws/src/build/sml_ros2_examples': PYTHONPATH=/root/ros2_ws/src/build/sml_ros2_examples/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/install/sml_ros2_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/ros2_ws/src/build/sml_ros2_examples/build --no-deps symlink_data
+[2.954s] running develop
+[3.344s] running egg_info
+[3.344s] creating ros2_examples.egg-info
+[3.345s] writing ros2_examples.egg-info/PKG-INFO
+[3.345s] writing dependency_links to ros2_examples.egg-info/dependency_links.txt
+[3.347s] writing entry points to ros2_examples.egg-info/entry_points.txt
+[3.347s] writing requirements to ros2_examples.egg-info/requires.txt
+[3.348s] writing top-level names to ros2_examples.egg-info/top_level.txt
+[3.348s] writing manifest file 'ros2_examples.egg-info/SOURCES.txt'
+[3.354s] reading manifest file 'ros2_examples.egg-info/SOURCES.txt'
+[3.357s] writing manifest file 'ros2_examples.egg-info/SOURCES.txt'
+[3.362s] running build_ext
+[3.363s] Creating /root/ros2_ws/src/install/sml_ros2_examples/lib/python3.10/site-packages/ros2-examples.egg-link (link to .)
+[3.366s] Installing service_client script to /root/ros2_ws/src/install/sml_ros2_examples/lib/sml_ros2_examples
+[3.367s] Installing service_server script to /root/ros2_ws/src/install/sml_ros2_examples/lib/sml_ros2_examples
+[3.367s] Installing topic_publish script to /root/ros2_ws/src/install/sml_ros2_examples/lib/sml_ros2_examples
+[3.368s] Installing topic_subscribe script to /root/ros2_ws/src/install/sml_ros2_examples/lib/sml_ros2_examples
+[3.368s] 
+[3.369s] Installed /root/ros2_ws/src/build/sml_ros2_examples
+[3.369s] running symlink_data
+[3.370s] error: can't copy '/root/ros2_ws/src/build/sml_ros2_examples/resource/ros2_examples': doesn't exist or not a regular file
+[3.496s] Invoked command in '/root/ros2_ws/src/build/sml_ros2_examples' returned '1': PYTHONPATH=/root/ros2_ws/src/build/sml_ros2_examples/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/install/sml_ros2_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/ros2_ws/src/build/sml_ros2_examples/build --no-deps symlink_data

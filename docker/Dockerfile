@@ -41,7 +41,10 @@ RUN apt update && apt install -y \
     libxext6 \
     libxkbcommon-x11-0
 
+WORKDIR /root/ros2_ws/src
+
 ENV QT_QPA_PLATFORM=xcb
 
 RUN apt update && apt install -y ros-humble-turtlesim
 
+# ENTRYPOINT ["/bin/bash"]
