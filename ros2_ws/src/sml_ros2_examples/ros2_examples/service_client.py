@@ -13,7 +13,7 @@ class TriggerClient(Node):
             self.get_logger().info('Service not available, waiting...')
 
         self.get_logger().info('You said "I love you"')
-        node.get_logger().info(f'The answer was.. ')
+        self.get_logger().info(f'The answer was.. ')
         self.req = Trigger.Request()
 
     def call(self):
@@ -40,3 +40,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
