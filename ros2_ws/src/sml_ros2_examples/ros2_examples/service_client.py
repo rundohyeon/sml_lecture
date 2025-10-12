@@ -12,9 +12,9 @@ class TriggerClient(Node):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting...')
 
-        self.get_logger().info('You said "I love you"')
-        self.get_logger().info(f'The answer was.. ')
+        self.get_logger().info('You are a client')
         self.req = Trigger.Request()
+        self.get_logger().info(f'You sent a service to the client')
 
     def call(self):
         return self.client.call_async(self.req)
@@ -30,7 +30,7 @@ def main(args=None):
 
         response = future.result()
         time.sleep(3)
-        node.get_logger().info(f'"{response.message}"')
+        node.get_logger().info(f'response : "{response.message}"')
     else:
         node.get_logger().error('Service call failed')
 
@@ -40,4 +40,5 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
