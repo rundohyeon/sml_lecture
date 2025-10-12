@@ -6,15 +6,15 @@ import time
 class TriggerService(Node):
     def __init__(self):
         super().__init__('trigger_service')
+        
+        self.get_logger().info('you are a client')
         self.srv = self.create_service(Trigger, 'attack', self.cb)
         self.get_logger().info('')
 
     def cb(self, request, response):
-        self.get_logger().info('"I love you"')
-        time.sleep(2)
-        self.get_logger().info(f"Someone loves me.. But I don't")
+        self.get_logger().info(f"you received a service from the client")
         response.success = True
-        response.message = "Sorry I don't"
+        response.message = "Hello, client"
 
         return response
 
@@ -29,3 +29,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
