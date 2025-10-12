@@ -14,7 +14,7 @@ class TriggerClient(Node):
 
         self.get_logger().info('You are a client')
         self.req = Trigger.Request()
-        self.get_logger().info(f'You sent a service to the client')
+        self.get_logger().info(f'You sent a service to the server')
 
     def call(self):
         return self.client.call_async(self.req)
@@ -40,5 +40,6 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
 
