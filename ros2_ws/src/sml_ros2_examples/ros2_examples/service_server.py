@@ -7,7 +7,7 @@ class TriggerService(Node):
     def __init__(self):
         super().__init__('trigger_service')
         
-        self.get_logger().info('you are a client')
+        self.get_logger().info('you are a server')
         self.srv = self.create_service(Trigger, 'attack', self.cb)
         self.get_logger().info('')
 
@@ -29,4 +29,5 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
