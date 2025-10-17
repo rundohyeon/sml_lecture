@@ -1,6 +1,0 @@
-Invoking command in '/root/common/indy-ros2/build/indy_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/common/indy-ros2/src/sml_indy-ros2/indy_description -DCMAKE_INSTALL_PREFIX=/root/common/indy-ros2/install/indy_description
-Invoked command in '/root/common/indy-ros2/build/indy_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/common/indy-ros2/src/sml_indy-ros2/indy_description -DCMAKE_INSTALL_PREFIX=/root/common/indy-ros2/install/indy_description
-Invoking command in '/root/common/indy-ros2/build/indy_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_description -- -j12 -l12
-Invoked command in '/root/common/indy-ros2/build/indy_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_description -- -j12 -l12
-Invoking command in '/root/common/indy-ros2/build/indy_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_description
-Invoked command in '/root/common/indy-ros2/build/indy_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_description

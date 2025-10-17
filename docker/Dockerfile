@@ -1,10 +1,6 @@
-FROM althack/ros2:humble-cuda-gazebo-2024-07-01
+FROM arm64v8/ros:humble-ros-base
 
 
-# ROS 2 저장소 GPG 키 갱신 및 저장소 추가
-RUN curl -fsSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg && \
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
-    > /etc/apt/sources.list.d/ros2.list
 
 
 RUN curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
@@ -52,8 +48,8 @@ RUN mkdir -p /etc/apt/keyrings
 RUN curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | tee /etc/apt/keyrings/librealsense.pgp > /dev/null
 RUN echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
     tee /etc/apt/sources.list.d/librealsense.list
-RUN apt-get update  -y -qq && \
-    apt-get install -y -qq \
+RUN apt-get update
+RUN apt-get install -y -qq \
     librealsense2-utils \
     librealsense2-dev \
     librealsense2-dbg
@@ -140,7 +136,7 @@ RUN apt install -q -y \
     rospack-tools \
     python3-colcon-mixin
     
-RUN colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+#RUN colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 RUN colcon mixin update default
 RUN apt install python3-vcstool
 RUN apt install -y librealsense2-utils librealsense2-dev
@@ -155,8 +151,6 @@ RUN apt install -q -y \
     ros-humble-moveit-ros-move-group \
     ros-humble-moveit-planners-ompl \
     ros-humble-moveit-kinematics \
-    ros-humble-gazebo-ros \
-    ros-humble-gazebo-ros2-control \
     ros-humble-controller-manager \
     ros-humble-joint-state-broadcaster \
     ros-humble-joint-state-publisher-gui \
@@ -165,6 +159,10 @@ RUN apt install -q -y \
     ros-humble-rviz-visual-tools \
     ros-humble-moveit-visual-tools \
     ros-humble-moveit-resources
+
+#
+#    ros-humble-gazebo-ros \
+#    ros-humble-gazebo-ros2-control \
 
 RUN apt install -y ros-humble-rmw-cyclonedds-cpp
 

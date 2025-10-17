@@ -1,3 +1,0 @@
-source;share/indy_moveit/environment/ament_prefix_path.sh
-source;share/indy_moveit/environment/path.sh
-source;share/indy_moveit/environment/pythonpath.sh
