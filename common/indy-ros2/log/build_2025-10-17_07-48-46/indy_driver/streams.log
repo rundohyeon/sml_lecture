@@ -1,0 +1,82 @@
+[0.016s] Invoking command in '/root/common/indy-ros2/build/indy_driver': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_driver -- -j12 -l12
+[0.027s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.027s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.027s]   CMake.
+[0.027s] 
+[0.027s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.027s]   to tell CMake that the project requires at least <min> but has been updated
+[0.027s]   to work with policies introduced by <max> or earlier.
+[0.027s] 
+[0.028s] [0m
+[0.081s] -- The C compiler identification is GNU 11.4.0
+[0.141s] -- The CXX compiler identification is GNU 11.4.0
+[0.148s] -- Detecting C compiler ABI info
+[0.203s] -- Detecting C compiler ABI info - done
+[0.218s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.218s] -- Detecting C compile features
+[0.219s] -- Detecting C compile features - done
+[0.229s] -- Detecting CXX compiler ABI info
+[0.295s] -- Detecting CXX compiler ABI info - done
+[0.309s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.310s] -- Detecting CXX compile features
+[0.310s] -- Detecting CXX compile features - done
+[0.315s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.559s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.639s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.642s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.642s] -- Added test 'lint_cmake' to check CMake code style
+[0.643s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.645s] -- Added test 'xmllint' to check XML markup files
+[0.646s] -- Configuring done (0.6s)
+[0.653s] -- Generating done (0.0s)
+[0.653s] -- Build files have been written to: /root/common/indy-ros2/build/indy_driver
+[0.671s] Built target ament_cmake_python_copy_indy_driver
+[0.894s] running egg_info
+[0.894s] writing indy_driver.egg-info/PKG-INFO
+[0.894s] writing dependency_links to indy_driver.egg-info/dependency_links.txt
+[0.894s] writing top-level names to indy_driver.egg-info/top_level.txt
+[0.896s] reading manifest file 'indy_driver.egg-info/SOURCES.txt'
+[0.897s] writing manifest file 'indy_driver.egg-info/SOURCES.txt'
+[0.913s] Built target ament_cmake_python_build_indy_driver_egg
+[0.918s] Invoked command in '/root/common/indy-ros2/build/indy_driver' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_driver -- -j12 -l12
+[0.932s] Invoking command in '/root/common/indy-ros2/build/indy_driver': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_driver
+[0.934s] -- Install configuration: ""
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver//launch
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver//launch/indy_bringup.launch.py
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver//controller
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver//controller/indy_controllers_7dof.yaml
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver//controller/indy_controllers_6dof.yaml
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/lib/indy_driver/indy_driver.py
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/lib/indy_driver/servo_joy_input.py
+[0.935s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/lib/indy_driver/servo_keyboard_input.py
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/lib/indy_driver/indy_define.py
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/environment/pythonpath.sh
+[0.936s] -- Installing: /root/common/indy-ros2/install/indy_driver/share/indy_driver/environment/pythonpath.dsv
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver-1.0.0-py3.10.egg-info
+[0.936s] -- Installing: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.936s] -- Installing: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver-1.0.0-py3.10.egg-info/PKG-INFO
+[0.936s] -- Installing: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.936s] -- Installing: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver-1.0.0-py3.10.egg-info/top_level.txt
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver/__init__.py
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver/indy_driver.py
+[0.936s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver/servo_keyboard_input.py
+[0.937s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver/indy_define.py
+[0.937s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver/servo_joy_input.py
+[0.960s] Listing '/root/common/indy-ros2/install/indy_driver/local/lib/python3.10/dist-packages/indy_driver'...
+[0.963s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/ament_index/resource_index/package_run_dependencies/indy_driver
+[0.964s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/ament_index/resource_index/parent_prefix_path/indy_driver
+[0.964s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/environment/ament_prefix_path.sh
+[0.964s] -- Installing: /root/common/indy-ros2/install/indy_driver/share/indy_driver/environment/ament_prefix_path.dsv
+[0.964s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/environment/path.sh
+[0.964s] -- Installing: /root/common/indy-ros2/install/indy_driver/share/indy_driver/environment/path.dsv
+[0.964s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/local_setup.bash
+[0.964s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/local_setup.sh
+[0.964s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/local_setup.zsh
+[0.964s] -- Installing: /root/common/indy-ros2/install/indy_driver/share/indy_driver/local_setup.dsv
+[0.965s] -- Installing: /root/common/indy-ros2/install/indy_driver/share/indy_driver/package.dsv
+[0.965s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/ament_index/resource_index/packages/indy_driver
+[0.965s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/cmake/indy_driverConfig.cmake
+[0.965s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/cmake/indy_driverConfig-version.cmake
+[0.965s] -- Up-to-date: /root/common/indy-ros2/install/indy_driver/share/indy_driver/package.xml
+[0.966s] Invoked command in '/root/common/indy-ros2/build/indy_driver' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_driver

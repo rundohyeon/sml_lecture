@@ -1,0 +1,38 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/common/indy-ros2/build/indy_gazebo
+-- Install configuration: ""
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch/indy_gazebo.launch.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_7dof.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_6dof.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/package_run_dependencies/indy_gazebo
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/parent_prefix_path/indy_gazebo
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.sh
+-- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.sh
+-- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.bash
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.zsh
+-- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.dsv
+-- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/packages/indy_gazebo
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig.cmake
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig-version.cmake
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.xml

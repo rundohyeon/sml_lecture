@@ -1,0 +1,51 @@
+[0.015s] Invoking command in '/root/common/indy-ros2/build/indy_gazebo': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_gazebo -- -j12 -l12
+[0.025s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.025s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.025s]   CMake.
+[0.026s] 
+[0.026s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.026s]   to tell CMake that the project requires at least <min> but has been updated
+[0.026s]   to work with policies introduced by <max> or earlier.
+[0.026s] 
+[0.026s] [0m
+[0.076s] -- The C compiler identification is GNU 11.4.0
+[0.157s] -- The CXX compiler identification is GNU 11.4.0
+[0.164s] -- Detecting C compiler ABI info
+[0.223s] -- Detecting C compiler ABI info - done
+[0.240s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.241s] -- Detecting C compile features
+[0.241s] -- Detecting C compile features - done
+[0.251s] -- Detecting CXX compiler ABI info
+[0.322s] -- Detecting CXX compiler ABI info - done
+[0.338s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.339s] -- Detecting CXX compile features
+[0.339s] -- Detecting CXX compile features - done
+[0.344s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.517s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.571s] -- Configuring done (0.5s)
+[0.574s] -- Generating done (0.0s)
+[0.574s] -- Build files have been written to: /root/common/indy-ros2/build/indy_gazebo
+[0.585s] Invoked command in '/root/common/indy-ros2/build/indy_gazebo' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_gazebo -- -j12 -l12
+[0.601s] Invoking command in '/root/common/indy-ros2/build/indy_gazebo': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_gazebo
+[0.603s] -- Install configuration: ""
+[0.603s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch
+[0.604s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch/indy_gazebo.launch.py
+[0.604s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller
+[0.604s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_7dof.yaml
+[0.604s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_6dof.yaml
+[0.604s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/package_run_dependencies/indy_gazebo
+[0.604s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/parent_prefix_path/indy_gazebo
+[0.605s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.sh
+[0.605s] -- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.dsv
+[0.605s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.sh
+[0.605s] -- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.dsv
+[0.605s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.bash
+[0.606s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.sh
+[0.606s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.zsh
+[0.607s] -- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.dsv
+[0.607s] -- Installing: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.dsv
+[0.607s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/packages/indy_gazebo
+[0.607s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig.cmake
+[0.607s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig-version.cmake
+[0.607s] -- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.xml
+[0.608s] Invoked command in '/root/common/indy-ros2/build/indy_gazebo' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_gazebo

@@ -58,7 +58,6 @@ RUN apt-get update  -y -qq && \
     librealsense2-dev \
     librealsense2-dbg
 
-
 # [Install Cmake]
 RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null && \
     apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main" && \
@@ -69,9 +68,9 @@ RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/nul
 # [Install ROS2 Humble]
 # RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg && \
 #    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
-# RUN apt update && \
+RUN apt update && \
 #     apt upgrade -y && \
-#     apt install -q -y \
+     apt install -q -y \
 #     build-essential \
 #     libasio-dev \
 #     libtinyxml2-dev \
@@ -85,13 +84,13 @@ RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/nul
 #     ros-${ROS_DISTRO}-*-msgs \
 #     ros-${ROS_DISTRO}-control* \
 #     ros-${ROS_DISTRO}-usb-cam \
-#     ros-${ROS_DISTRO}-realsense2-camera \
-#     ros-${ROS_DISTRO}-realsense2-description \
-#     ros-${ROS_DISTRO}-robot-localization \
+     ros-${ROS_DISTRO}-realsense2-camera \
+     ros-${ROS_DISTRO}-realsense2-description \
+     ros-${ROS_DISTRO}-robot-localization \
 #    ros-${ROS_DISTRO}-ur* \
-#    ros-${ROS_DISTRO}-librealsense2* \
+    ros-${ROS_DISTRO}-librealsense2* \
 #    ros-${ROS_DISTRO}-diagnostic-updater \
-#    ros-${ROS_DISTRO}-vision-msgs*
+    ros-${ROS_DISTRO}-vision-msgs*
 
 
 RUN apt update && \
@@ -144,6 +143,7 @@ RUN apt install -q -y \
 RUN colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 RUN colcon mixin update default
 RUN apt install python3-vcstool
+RUN apt install -y librealsense2-utils librealsense2-dev
 
 RUN apt update
 RUN apt install -q -y \
