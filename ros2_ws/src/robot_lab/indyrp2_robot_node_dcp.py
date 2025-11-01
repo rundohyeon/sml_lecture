@@ -74,14 +74,17 @@ class IndyRP2Node(Node):
 
             if cmd =="initialize":
                 self.init_robot()
+                self.init_gripper()
 
             elif cmd == "movej":
                 self.move_joints(coord, mode)
 
             elif cmd == "movel":
                 # trans in meter, rot in quat
-                if mode == 'base':
+                if mode == 'base_abs':
                     self.move_linear_from_base(coord[:3], coord[3:7])
+                elif mode == 'base_rel':
+                    self.move_linear_from_base(coord[:3], coord[3:7], from_base=False)
                 elif mode == 'tool':
                     self.move_linear_from_tcp(coord[:3], coord[3:7])
             elif cmd == 'gripper':
@@ -101,13 +104,14 @@ class IndyRP2Node(Node):
 
 
     def init_robot(self):
+        print("initialize robot")
         self.move_joints(self.get_parameter('posj.home').get_parameter_value().double_array_value, 'abs')
-        self.wait_robot_move()
 
 
     def wait_robot_move(self):
         self.indy.wait_for_motion_state('is_target_reached')
 
+        time.sleep(0.5)
 
     def move_joints(self, joints: list, absolute):
         '''
@@ -159,6 +163,13 @@ class IndyRP2Node(Node):
         self.indy.movel(ttarget=pose, base_type=TaskBaseType.TCP)
         self.wait_robot_move()
 
+    def init_gripper(self):
+        print("initialize gripper")
+        angle = 60.0
+        self.sock.send_string(json.dumps({"cmd": "set", "angle_deg": angle}))
+        print("## gripper response ## \n", self.sock.recv_json())
+        time.sleep(2)
+
     def gripperControl(self, mode):
         if mode == 'open':
             angle = 60.0
@@ -166,7 +177,7 @@ class IndyRP2Node(Node):
             angle = 160.0
         self.sock.send_string(json.dumps({"cmd": "set", "angle_deg": angle}))
         print("## gripper response ## \n", self.sock.recv_json())
-        time.sleep(1)
+        time.sleep(2)
 
 
 if __name__ == '__main__':
