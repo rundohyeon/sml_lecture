@@ -8,6 +8,7 @@ docker run -it --rm \
     --runtime=nvidia \
     --privileged $gpu\
     --network=host \
+    -v "$PWD":/app -w /app \
     --name="sml_lecture" \
     -v /dev:/dev \
     -e XAUTHORITY=$XAUTH \

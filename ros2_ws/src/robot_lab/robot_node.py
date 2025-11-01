@@ -123,13 +123,19 @@ class robotNode(Node):
 
     def RobotTask(self):
         # initialize
+        print("initialize")
         self.sendCommand('initialize')
+
+        # # gripper control
+        # self.sendCommand("gripper", 'close')
+        # self.sendCommand("gripper", 'open')
 
         # # movej rel
         #self.sendCommand("movej", 'rel', [-90.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
 
         # # movej abs
-        # self.sendCommand("movej", 'abs', [90.0, -25.0, 0.0, 115.0, 0.0, 90.0, 0.0])
+        # print("move abs")
+        # self.sendCommand("movej", 'abs', [-146.4, -42.58, -0.68, -109.37, 0.99, -28.09, -57.7])
 
         # # movel rel
         #self.sendCommand("movel", 'tool', [0.01, 0.0, 0.0, 0.0, 0.0, 0.0])
@@ -162,7 +168,7 @@ if __name__ == '__main__':
 
     node = robotNode()
     try:
-        # node.RobotTask()
+        node.RobotTask()
         rclpy.spin(node)
 
     except KeyboardInterrupt:

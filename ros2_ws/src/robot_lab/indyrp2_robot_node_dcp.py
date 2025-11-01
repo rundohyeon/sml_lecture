@@ -15,11 +15,7 @@ from scipy.spatial.transform import Rotation as R
 
 from visualization_msgs.msg import Marker, MarkerArray
 
-# from metalab.ros2_wrapper import BehaviorTreeServerNode
-# from mtlab_msgs.msg import BehaviorTreeStatus
-# from metalab.moveit2_interface import MoveIt2Interface
-# from metalab.moveit2_servo  import MoveIt2Servo
-# from metalab.linear_robot_driver import LinearRobotManager
+
 from indy_interfaces.srv import IndyService
 from indy_driver.indy_define import *
 from tf import ROS2TF 
@@ -27,10 +23,10 @@ from tf2_ros import Buffer, TransformListener
 
 from neuromeka import IndyDCP3, JointBaseType, TaskBaseType
 
-# -----TELE STATUS-----
-TELE_STOP   = 0
-TELE_TASK   = 1
-TELE_JOINT  = 2
+import zmq, sys
+
+RPI_IP = "192.168.1.9"   # gripper IP
+PORT   = 5555
 
 DEG2RAD = math.pi / 180.0
 RAD2DEG = 180.0 / math.pi
@@ -43,12 +39,16 @@ class IndyRP2Node(Node):
         super().__init__('indyrp2_node')
 
         self.declare_parameter('indy_ip', "192.168.1.10")
-        self.declare_parameter('posj.home', [90.0, -25.0, 0.0, 115.0, 0.0, 90.0, 0.0]) # heading to lazer
-
+        self.declare_parameter('posj.home', [-90.0, -20.0, 14.0, -100.0, 0.0, -60.0, -90.0]) # heading to lazer
         self.workspace_pub = self.create_publisher(MarkerArray, 'workspace_marker', 1)
 
         self.indy = IndyDCP3(self.get_parameter('indy_ip').get_parameter_value().string_value)
         self.rosTF = ROS2TF(node=self)
+
+        # gripper
+        ctx = zmq.Context()
+        self.sock = ctx.socket(zmq.REQ)
+        self.sock.connect(f"tcp://{RPI_IP}:{PORT}")
 
         # publishers
         # self._status_publisher = self.create_publisher(Int32, f'{node_name}/status', 1)
@@ -84,8 +84,15 @@ class IndyRP2Node(Node):
                     self.move_linear_from_base(coord[:3], coord[3:7])
                 elif mode == 'tool':
                     self.move_linear_from_tcp(coord[:3], coord[3:7])
+            elif cmd == 'gripper':
+                if mode == 'open':
+                    self.gripperControl('open')
+                elif mode == 'close':
+                    self.gripperControl('close')
+                else:
+                    print(f"[ERROR] Unknown gripper command {mode}")
             else:
-                print(f"Unknown command: {cmd}")
+                print(f"[ERROR] Unknown command: {cmd}")
 
         except json.JSONDecodeError as e:
             self.get_logger().error(f"Failed to parse JSON: {e}")
@@ -151,6 +158,15 @@ class IndyRP2Node(Node):
         pose.extend(euler)
         self.indy.movel(ttarget=pose, base_type=TaskBaseType.TCP)
         self.wait_robot_move()
+
+    def gripperControl(self, mode):
+        if mode == 'open':
+            angle = 60.0
+        elif mode == 'close':
+            angle = 160.0
+        self.sock.send_string(json.dumps({"cmd": "set", "angle_deg": angle}))
+        print("## gripper response ## \n", self.sock.recv_json())
+        time.sleep(1)
 
 
 if __name__ == '__main__':
