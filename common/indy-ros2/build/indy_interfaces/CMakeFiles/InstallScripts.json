@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/root/common/indy-ros2/build/indy_interfaces/cmake_install.cmake",
+		"/root/common/indy-ros2/build/indy_interfaces/indy_interfaces__py/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

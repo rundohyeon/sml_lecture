@@ -25,7 +25,7 @@ from neuromeka import IndyDCP3, JointBaseType, TaskBaseType
 
 import zmq, sys
 
-RPI_IP = "192.168.1.9"   # gripper IP
+RPI_IP = "192.168.1.15"   # gripper IP
 PORT   = 5555
 
 DEG2RAD = math.pi / 180.0
@@ -106,6 +106,7 @@ class IndyRP2Node(Node):
     def init_robot(self):
         print("initialize robot")
         self.move_joints(self.get_parameter('posj.home').get_parameter_value().double_array_value, 'abs')
+        print("initialize robot done")
 
 
     def wait_robot_move(self):

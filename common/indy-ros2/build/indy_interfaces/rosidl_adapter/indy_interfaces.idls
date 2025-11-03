@@ -1,0 +1,4 @@
+/root/common/indy-ros2/build/indy_interfaces/rosidl_adapter/indy_interfaces:srv/IndyService.idl
+/root/common/indy-ros2/build/indy_interfaces/rosidl_adapter/indy_interfaces:msg/ServoTx.idl
+/root/common/indy-ros2/build/indy_interfaces/rosidl_adapter/indy_interfaces:msg/ServoRx.idl
+/root/common/indy-ros2/build/indy_interfaces/rosidl_adapter/indy_interfaces:msg/ServoDataArray.idl
