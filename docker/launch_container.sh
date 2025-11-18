@@ -11,6 +11,8 @@ docker run -it --rm \
     -v "$PWD":/app -w /app \
     --name="sml_lecture" \
     -v /dev:/dev \
+    -v /run/udev:/run/udev \
+    -e LIBUVC_BACKEND=libusb \
     -e XAUTHORITY=$XAUTH \
     -e QT_X11_NO_MITSHM=1 \
     -e DISPLAY=$DISPLAY \

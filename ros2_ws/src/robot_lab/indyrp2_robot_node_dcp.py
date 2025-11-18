@@ -25,7 +25,7 @@ from neuromeka import IndyDCP3, JointBaseType, TaskBaseType
 
 import zmq, sys
 
-RPI_IP = "192.168.1.15"   # gripper IP
+RPI_IP = "192.168.1.8"    # gripper IP3
 PORT   = 5555
 
 DEG2RAD = math.pi / 180.0

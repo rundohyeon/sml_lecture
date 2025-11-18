@@ -1,4 +1,0 @@
-source;share/indy_interfaces/local_setup.bash
-source;share/indy_interfaces/local_setup.dsv
-source;share/indy_interfaces/local_setup.sh
-source;share/indy_interfaces/local_setup.zsh

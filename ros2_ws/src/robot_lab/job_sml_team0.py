@@ -21,6 +21,7 @@ DEG2RAD = math.pi / 180.0
 RAD2DEG = 180.0 / math.pi
 
 
+
 class robotNode(Node):
     def __init__(self):
         super().__init__('robot_node')
@@ -140,110 +141,31 @@ class robotNode(Node):
 
 
     def RobotTask(self):
-        # self.sendCommand("gripper", 'open')
-        # self.sendCommand("movej", 'abs', [-10,-20,0,-100,0,-60,-90])
-        # self.sendCommand("movej", 'abs', [10,-20,0,-100,0,-60,-90])
-        # self.sendCommand("movej", 'rel', [-10,0,0,0,0,0,0])
-        # self.sendCommand("movej", 'rel', [20,0,0,0,0,0,0])
-
-        # self.sendCommand("movel", 'base_abs', [0.457, -0.086, 0.319, 0.0, 180.0, 90.0])
-        # self.sendCommand("movel", 'base_abs', [0.457, -0.286, 0.319, 0.0, 180.0, 90.0])
-
-        # self.sendCommand("movel", 'base_rel', [0.0, 0.1, 0.0, 0.0, 0.0, 0.0])
-        # self.sendCommand("movel", 'base_rel', [0.0, -0.2, 0.0, 0.0, 0.0, 0.0])
-
-        # self.sendCommand("movel", 'tool', [-0.1, 0.0, 0.0, 0.0, 0.0, 0.0])
-        # self.sendCommand("movel", 'tool', [0.2, 0.0, 0.0, 0.0, 0.0, 0.0])
-
-        # self.sendCommand("gripper", 'close')
-        # self.sendCommand("gripper", 'open')
-
-
         # # initialize
-        print("initialize")
-        self.sendCommand('initialize')
-        time.sleep(4)
-        
-
-        # self.sendCommand("movej", 'abs', [-146.4, -42.58, -0.68, -109.37, 0.99, -28.09, -57.7])
-        # time.sleep(4)
-
-        # # move to battery origin pose
-        # self.sendCommand("movej", 'abs', [-152.36, -54.32, 0.63, -92.00, -0.91, -33.88, -61.12])
-
-        # # approach to battery
-        # self.sendCommand("movel", 'tool', [0.005, 0.0, 0.048, 0.0, 0.0, 0.0])
-
-        # # grasp
-        # self.sendCommand("gripper", 'close')
-
-        # # pick up battery
-        # self.sendCommand("movel", 'tool', [0.0, 0.0, -0.048, 0.0, 0.0, 0.0])
-
-        # # move to battery new pose
-        # self.sendCommand("movel", 'base_abs', [-0.489, -0.280, 0.0445, 180, 0, 90])
-
-        # #tilt gripper
-        # self.sendCommand("movel", 'tool', [0.0, 0.0, 0.0, -20.0, 0.0, 0.0])
-
-        # # mount battery
-        # #adjust position 
-        # self.sendCommand("movel", 'tool', [0.0, -0.05, 0.0, 0.0, 0.0, 0.0])
-
-        # # # move down
-        # self.sendCommand("movel", 'base_rel', [0.0, 0.0, -0.02, 0.0, 0.0, 0.0])
-
-        # # # release gripper
-        # self.sendCommand("gripper", 'open')
-
-        # # # move up
-        # self.sendCommand("movel", 'base_rel', [0.0, 0.0, 0.02, 0, 0, 0])
-
-        # # # close gripper
-        # self.sendCommand("gripper", 'close')
-
-        # # # move to spring side
-        # self.sendCommand("movel", 'tool', [0.0, -0.02, 0.0, 0.0, 0.0, 0.0])
-
-        # # press spring side
-        # self.sendCommand("movel", 'tool', [0.0, 0.0, 0.015, 0.0, 0.0, 0.0])
-        # self.sendCommand("movel", 'tool', [0.0, 0.0, -0.02, 0.0, 0.0, 0.0])
-
-        # # move to opposite side
-        # self.sendCommand("movel", 'tool', [0.0, 0.055, 0.0, 0.0, 0.0, 0.0])
-
-        # # move down 
-        # self.sendCommand("movel", 'tool', [0.0, 0.0, 0.023, 0.0, 0.0, 0.0])
-
-        # # insert 
-        # self.sendCommand("movel", 'tool', [0.0, -0.03, 0.0, 0.0, 0.0, 0.0])
-        # self.sendCommand("movel", 'tool', [0.0, -0.007, 0.015, 0.0, 0.0, 0.0])
-
-        # # # move up 
-        # self.sendCommand("movel", 'base_rel', [0.0, 0.0, 0.025, 0, 0, 0])
+        # print("initialize")
+        # self.sendCommand('initialize')
+        self.sendCommand("movej",'abs',[-114.21, -70.04, -77.63, -87.44, 64.68, -82.78, -105.79])
+        time.sleep(2)
+        self.sendCommand("gripper",'close')
+        self.sendCommand("movej",'abs',[-113.20, -64.37, -80.38, -87.98, 59.40, -85.73, -105.73])
+        self.sendCommand("movel",'base_abs',[-0.49974, -0.27430, 0.01226, 175.40, 0.91, 91.92])
+        self.sendCommand("gripper",'open')
+        self.sendCommand("movel",'tool',[0, -0.01, -0.02, 0, 0, 0])
+        self.sendCommand("gripper",'close')
+        self.sendCommand("movel",'tool',[0, 0, 0.02, 0, 0, 0])
+        self.sendCommand("gripper",'open')
+        self.sendCommand("movel",'tool',[0, 0, -0.02, 0, 0, 0])
+        self.sendCommand("gripper",'close')
+        self.sendCommand("movel",'base_abs',[-0.47550, -0.27774, 0.02310, 168.03, -0.26, 91.45])
+        self.sendCommand("movel",'base_abs',[-0.53362, -0.27895, 0.01073, 168.04, -0.27, 91.44])
+        self.sendCommand("movel",'tool',[0, 0, 0.01, 0, 0, 0])
+        self.sendCommand("gripper",'open')
 
 
 
 
+        # self.sendCommand("gripper",'open')
 
-# 1 2 3 4 5
-#  6  7  8
-# 1 : (J) -133.26, -46.5, -0.69, -98.58. 0.87, -34.93, -44.45
-#     (L) -493.64, -251.29, 92.96, 180.00, 0.0, 90.0
-# 2 : (J) -138.88, -44.0, -0.79, -105.27, 1.08, -30.76, -50.34
-#     (L) -493.64, -177.26, 92.96, 180.00, 0.0, 90.0
-# 3 : (J) -146.4, -42.58, -0.68, -109.37, 0.99, -28.09, -57.7
-#     (L) -493.64, -99.48, 92.96,  180.00, 0.0, 90.0
-# 4 : (J) -155.7, -42.0, -0.28, -111.37, 0.42, -26.67, -66.22
-#     (L) -493.64, -16.25, 92.96,  180.00, 0.0, 90.0
-# 5 : (J) -164.14, -42.26, 0.28, -111.1, -0.43, -26.7, -73.42
-#     (L) -493.64, 52.02, 92.96,  180.00, 0.0, 90.0
-# 6 : (J) -126.8, -40.0, -3.66, -114.77, 5.57, -25.5, -44.65
-#     (L) -417.62, -214.75, 92.96,  180.00, 0.0, 90.0
-# 7 : (J) -137.41, -37.93, -3.17, -121.65, 5.59, -20.63, -55.09
-#     (L) -417.62, -109.48, 92.96,  180.00, 0.0, 90.0
-# 8 : (J) -155.3, -37.42, -1.69, -124.77, 3.34, -17.9, -69.71
-#     (L) -417.62, 21.94, 92.96,  180.00, 0.0, 90.0
 
 if __name__ == '__main__':
     rclpy.init()

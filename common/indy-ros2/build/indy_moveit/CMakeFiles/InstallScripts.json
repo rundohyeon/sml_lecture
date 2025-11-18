@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/root/common/indy-ros2/build/indy_moveit/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

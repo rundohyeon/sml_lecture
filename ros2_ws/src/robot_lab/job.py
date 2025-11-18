@@ -140,12 +140,43 @@ class robotNode(Node):
 
 
     def RobotTask(self):
+
+
         # # initialize
-        # print("initialize")
+        # # print("initialize")
         self.sendCommand('initialize')
-        # time.sleep(4)
-        self.sendCommand("movej", 'abs', [-146.4, -42.58, -0.68, -109.37, 0.99, -28.09, -57.7])
         time.sleep(4)
+        
+        
+        # self.sendCommand("movej", 'abs', [-146.4, -42.58, -0.68, -109.37, 0.99, -28.09, -57.7])
+        # time.sleep(4)
+
+        # # move to battery origin pose
+        # self.sendCommand("movej", 'abs', [-152.36, -54.32, 0.63, -92.00, -0.91, -33.88, -61.12])
+
+        # # approach to battery
+        # self.sendCommand("movel", 'tool', [0.005, 0.0, 0.048, 0.0, 0.0, 0.0])
+
+        # # grasp
+        # self.sendCommand("gripper", 'close')
+
+        # # pick up battery
+        # self.sendCommand("movel", 'tool', [0.0, 0.0, -0.048, 0.0, 0.0, 0.0])
+
+        # #   move to battery new pose
+        # self.sendCommand("movel", 'base_abs', [-0.489, -0.280, 0.0445, 180, 0, 90]) 
+
+        # self.sendCommand("movel", 'base_abs', [-0.517, -0.281, 0.009, 169.86, -0.85, 87.97]) 
+
+        # # grasp
+        # self.sendCommand("gripper", 'open')
+
+        # self.sendCommand("movel", 'base_abs', [-0.517, -0.281, 0.023, 169.86, -0.85, 87.97]) 
+
+        # self.sendCommand("gripper", 'close')
+        
+        # self.sendCommand("movel", 'base_abs', [-0.517, -0.281, 0.0048, 175.45, -0.67, 87.93]) 
+
 
 
 if __name__ == '__main__':
