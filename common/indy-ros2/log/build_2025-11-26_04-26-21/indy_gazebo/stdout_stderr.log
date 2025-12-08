@@ -1,0 +1,21 @@
+-- Install configuration: ""
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//launch/indy_gazebo.launch.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_7dof.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo//controller/indy_controllers_6dof.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/package_run_dependencies/indy_gazebo
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/parent_prefix_path/indy_gazebo
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/environment/path.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.bash
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.zsh
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/local_setup.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/ament_index/resource_index/packages/indy_gazebo
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig.cmake
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/cmake/indy_gazeboConfig-version.cmake
+-- Up-to-date: /root/common/indy-ros2/install/indy_gazebo/share/indy_gazebo/package.xml

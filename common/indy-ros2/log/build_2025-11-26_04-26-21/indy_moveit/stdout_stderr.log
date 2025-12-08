@@ -1,0 +1,52 @@
+Built target ament_cmake_python_copy_indy_moveit
+running egg_info
+writing indy_moveit.egg-info/PKG-INFO
+writing dependency_links to indy_moveit.egg-info/dependency_links.txt
+writing top-level names to indy_moveit.egg-info/top_level.txt
+reading manifest file 'indy_moveit.egg-info/SOURCES.txt'
+writing manifest file 'indy_moveit.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_indy_moveit_egg
+-- Install configuration: ""
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/moveit.launch.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/indy_moveit_real_robot.launch.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/indy_moveit_gazebo.launch.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/controllers_6dof.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/ompl_planning.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/controllers_7dof.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/indy_servo.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/kinematics.yaml
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config/indy_moveit.rviz
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config/indy_servo.rviz
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf/indy.srdf.xacro
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf/indy_macro.srdf.xacro
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/pythonpath.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/pythonpath.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/top_level.txt
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/__init__.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/launch_common.py
+Listing '/root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit'...
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/launch_common.py
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/package_run_dependencies/indy_moveit
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/parent_prefix_path/indy_moveit
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/ament_prefix_path.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/ament_prefix_path.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/path.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/path.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.bash
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.sh
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.zsh
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/package.dsv
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/packages/indy_moveit
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/cmake/indy_moveitConfig.cmake
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/cmake/indy_moveitConfig-version.cmake
+-- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/package.xml

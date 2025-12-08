@@ -74,7 +74,7 @@ class IndyRP2Node(Node):
 
             if cmd =="initialize":
                 self.init_robot()
-                self.init_gripper()
+                # self.init_gripper()
 
             elif cmd == "movej":
                 self.move_joints(coord, mode)
