@@ -1,114 +1,106 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-
+from std_msgs.msg import String
 
 import json
-import math 
 import time
-import numpy as np
+import math
+import serial
+import sys
 
-from std_msgs.msg import String
-from sensor_msgs.msg import Image
-
-import cv2
-from cv_bridge import CvBridge
-
-import transforms3d.euler as euler
-
-
-DEG2RAD = math.pi / 180.0
-RAD2DEG = 180.0 / math.pi
+# =========================
+# Arduino Serial 설정
+# =========================
+ARDUINO_PORT = "/dev/ttyUSB0"
+ARDUINO_BAUD = 115200
 
 
-class robotNode(Node):
+# =========================
+# ROS2 Job Node
+# =========================
+class JobJJNode(Node):
     def __init__(self):
-        super().__init__('robot_node')
-        self.publisher_ = self.create_publisher(String, 'indyrp2_node/command', 10)
+        super().__init__('job_jj_node')
 
-        # ---- Parameters for RealSense topics (override via ROS params if needed) ----
-        self.declare_parameter('color_topic', '/camera/camera/color/image_raw')
-        self.declare_parameter('depth_topic', '/camera/camera/depth/image_rect_raw')  # optional
-
-        color_topic = self.get_parameter('color_topic').get_parameter_value().string_value
-        depth_topic = self.get_parameter('depth_topic').get_parameter_value().string_value
-
-
-        # ---- QoS for sensor data ----
-        sensor_qos = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=5,
-            durability=DurabilityPolicy.VOLATILE
+        # ROS publisher (robot command)
+        self.publisher_ = self.create_publisher(
+            String,
+            'indyrp2_node/command',
+            10
         )
 
-        # ---- CvBridge ----
-        self.bridge = CvBridge()
+        # Arduino Serial 연결
+        self.arduino = None
+        self._init_arduino()
 
-        # ---- Subscribers ----
-        self.color_sub = self.create_subscription(
-            Image, color_topic, self._on_color, sensor_qos
-        )
-        self.depth_sub = self.create_subscription(
-            Image, depth_topic, self._on_depth, sensor_qos
-        )
-
-        # ---- Latest frames (thread-safe enough for simple use) ----
-        self.latest_color = None        # numpy array (H, W, 3) BGR
-        self.latest_depth = None        # numpy array (H, W) in millimeters (uint16) or meters (float32)
-        self.show_window = True   # turn off on headless machines
-        self.robot_status = 'Idle'
-
-    def _on_color(self, msg: Image):
+    # -------------------------
+    # Arduino Serial Init
+    # -------------------------
+    def _init_arduino(self):
         try:
-            cv_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-            self.latest_color = cv_img
-
-            if self.show_window:
-                cv2.imshow("RealSense Color", cv_img)
-                # 1 ms wait lets HighGUI process window events
-                # If 'q' pressed, shut down cleanly
-                key = cv2.waitKey(1) & 0xFF
-                if key == ord('q'):
-                    cv2.imwrite('pos6.jpg', cv_img)
-                    self.get_logger().info("Quit requested. Shutting down...")
-                    rclpy.shutdown()
-
+            self.arduino = serial.Serial(
+                ARDUINO_PORT,
+                ARDUINO_BAUD,
+                timeout=1
+            )
+            # Arduino는 시리얼 연결 시 리셋됨 → 대기
+            time.sleep(2.0)
+            self.get_logger().info(
+                f"Arduino connected: {ARDUINO_PORT}"
+            )
         except Exception as e:
-            self.get_logger().error(f"Color image conversion failed: {e}")
+            self.get_logger().error(
+                f"Arduino connection failed: {e}"
+            )
+            self.arduino = None
 
-    def _on_depth(self, msg: Image):
-        try:
-            # Use passthrough for depth to keep the native type (usually 16UC1)
-            depth = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
-            self.latest_depth = depth
+    # -------------------------
+    # Conveyor Control (Serial)
+    # -------------------------
+    def conveyor_move(self, direction: str, duration: float):
+        """
+        direction: 'in' or 'out'
+        duration: seconds (float)
+        """
+        if self.arduino is None:
+            self.get_logger().warn("Arduino not connected")
+            return
 
-            # Example: save the first depth frame as a PNG (keeps 16-bit)
-            if not hasattr(self, '_saved_depth'):
-                # For visualization you might normalize; here we keep raw
-                # cv2.imwrite('depth_frame.png', depth)
-                self._saved_depth = True
-                self.get_logger().info(
-                    f"Saved first depth frame: depth_frame.png  shape={depth.shape}, dtype={depth.dtype}"
-                )
-        except Exception as e:
-            self.get_logger().error(f"Depth image conversion failed: {e}")
+        direction = direction.lower()
+        if direction not in ("in", "out"):
+            self.get_logger().error(
+                "direction must be 'in' or 'out'"
+            )
+            return
 
-    def sendCommand(self, cmd, mode='', coord=[]):
-        '''
-            make a topic to send
-            topic message type is String
-            
-        '''
+        if duration <= 0.0:
+            self.get_logger().error(
+                "duration must be > 0"
+            )
+            return
 
-        if cmd == 'movel':
+        cmd = f"MOVE {direction} {duration}\n"
+        self.arduino.write(cmd.encode("utf-8"))
+        self.get_logger().info(
+            f"[CONVEYOR] {cmd.strip()}"
+        )
 
-            (w, x, y, z) = euler.euler2quat(coord[3]*DEG2RAD,coord[4]*DEG2RAD,coord[5]*DEG2RAD)   # (w, x, y, z)
-            coord[3] = x
-            coord[4] = y
-            coord[5] = z
-            coord.append(w)
+    def conveyor_stop(self):
+        if self.arduino is None:
+            self.get_logger().warn("Arduino not connected")
+            return
 
+        self.arduino.write(b"STOP\n")
+        self.get_logger().info("[CONVEYOR] STOP")
+
+    # -------------------------
+    # Robot Command Publisher
+    # -------------------------
+    def send_command(self, cmd, mode="", coord=None):
+        if coord is None:
+            coord = []
 
         command = {
             "cmd": cmd,
@@ -118,80 +110,137 @@ class robotNode(Node):
 
         msg = String()
         msg.data = json.dumps(command)
+
         self.publisher_.publish(msg)
-        
-        print(f"Published: {msg}")
-        time.sleep(3)
+        self.get_logger().info(
+            f"[ROBOT CMD] {msg.data}"
+        )
+
+    # -------------------------
+    # Main Job Sequence
+    # -------------------------
+    def run_job(self):
+        # 1) 로봇 initialize (posj.home으로 이동)
+        self.send_command("initialize")
+        time.sleep(2.0)
+
+        # 2) 컨베이어 IN 방향으로 5초
+        self.conveyor_move("in", 2.0)
+        time.sleep(5.5)   # Arduino에서 duration 처리 안 하면 Python에서 대기
+
+        # 3) 컨베이어 정지
+        self.conveyor_stop()
+        time.sleep(1.0)
+
+        # 4) 로봇 대기자세로 이동
+        self.send_command(
+            "movej",
+            "abs",
+            [-130.62, -28.78, -28.65, -84.82, 10.78, -61.28, 73.41]
+        )
+        time.sleep(2.0)
+
+        # # poly mailer height (double)
+        # self.send_command(
+        #     "movej",
+        #     "abs",
+        #     [-132.11, -45.59, -44.59, -80.22, 30.47, -65.36, 73.41]
+        # )
+        # time.sleep(2.0)        
+
+        # # box height
+        # self.send_command(
+        #     "movej",
+        #     "abs",
+        #     [-132.14, -39.29, -35.53, -80.32, 22.16, -67.2, 73.41]
+        # )
+        # time.sleep(4.0)
+
+        #mailer plus box height
+        self.send_command(
+            "movej",
+            "abs",
+            [-132.45, -36.19, -37.10, -85.04, 23.27, -64.01, 73.41]
+        )
+        time.sleep(4.0)
+
+        # up
+        self.send_command(
+            "movej",
+            "abs",
+            [-131.45, -20.79, -28.08, -79.14, 10.49, -77.93, 73.41]
+        )
+        time.sleep(4.0)
+
+        # go to right
+        self.send_command(
+            "movej",
+            "abs",
+            [-141.26, -24.86, -74.58, -80.06, 23.35, -84.9, 73.41]
+        )
+        time.sleep(4.0)
+
+        # 4) 로봇 대기자세로 이동
+        self.send_command(
+            "movej",
+            "abs",
+            [-130.62, -28.78, -28.65, -84.82, 10.78, -61.28, 73.41]
+        )
+        time.sleep(2.0)
+
+        # single mailer height
+        self.send_command(
+            "movej",
+            "abs",
+            [-130.82, -45.25, -41.62, -79.86, 29.43, -65.37, 73.41]
+        )
+        time.sleep(4.0)
+
+        # up
+        self.send_command(
+            "movej",
+            "abs",
+            [-131.45, -20.79, -28.08, -79.14, 10.49, -77.93, 73.41]
+        )
+        time.sleep(4.0)
+
+        # go to right
+        self.send_command(
+            "movej",
+            "abs",
+            [-141.26, -24.86, -74.58, -80.06, 23.35, -84.9, 73.41]
+        )
+        time.sleep(4.0)
+
+        # # 5) TCP 기준 Z축으로 10 mm 이동
+        # self.send_command(
+        #     "movel",
+        #     "tool",
+        #     [0.0, 0.0, 0.01, 0.0, 0.0, 0.0]
+        # )
+
+        self.get_logger().info("Job finished")
 
 
-    def waitUntilExecuted(self):
-        try:
-            while True:
-                if self.robot_status == 'Idle':
-                    break
-        except KeyboardInterrupt:
-            print("keyboard interrupt")
-
-        except Exception as e:
-            print(f"An unexpected error occurred: {e}")
-
-        finally:
-            self.robot_status = 'running'
-
-
-    def RobotTask(self):
-
-
-        # # # initialize
-        # # # print("initialize")
-        self.sendCommand('initialize')
-        time.sleep(4)
-        
-        
-        self.sendCommand("movej", 'abs', [-134.68, -32.77, 7.27, -92.18, -8.14, -50.86, -38.78])
-        time.sleep(4)
-
-        # move to z axis
-        self.sendCommand("movel", 'tool', [0.0, 0.0, 0.01, 0.0, 0.0, 0.0])
-    
-        # # move to battery origin pose
-        # self.sendCommand("movej", 'abs', [-152.36, -54.32, 0.63, -92.00, -0.91, -33.88, -61.12])
-
-        # # approach to battery   
-        # self.sendCommand("movel", 'tool', [0.005, 0.0, 0.048, 0.0, 0.0, 0.0])
-
-        # # grasp
-        # self.sendCommand("gripper", 'close')
-
-        # # pick up battery
-        # self.sendCommand("movel", 'tool', [0.0, 0.0, -0.048, 0.0, 0.0, 0.0])
-
-        # #   move to battery new pose
-        # self.sendCommand("movel", 'base_abs', [-0.489, -0.280, 0.0445, 180, 0, 90]) 
-
-        # self.sendCommand("movel", 'base_abs', [-0.517, -0.281, 0.009, 169.86, -0.85, 87.97]) 
-
-        # # grasp
-        # self.sendCommand("gripper", 'open')
-
-        # self.sendCommand("movel", 'base_abs', [-0.517, -0.281, 0.023, 169.86, -0.85, 87.97]) 
-
-        # self.sendCommand("gripper", 'close')
-        
-        # self.sendCommand("movel", 'base_abs', [-0.517, -0.281, 0.0048, 175.45, -0.67, 87.93]) 
-
-
-
-if __name__ == '__main__':
+# =========================
+# main
+# =========================
+def main():
     rclpy.init()
 
-    node = robotNode()
-    try:
-        node.RobotTask()
-        rclpy.spin(node)
+    node = JobJJNode()
 
+    try:
+        node.run_job()
+        rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
+        if node.arduino is not None:
+            node.arduino.close()
         node.destroy_node()
         rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()

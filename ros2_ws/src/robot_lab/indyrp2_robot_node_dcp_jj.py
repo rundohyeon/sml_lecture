@@ -39,7 +39,7 @@ class IndyRP2Node(Node):
         super().__init__('indyrp2_node')
 
         self.declare_parameter('indy_ip', "192.168.1.10")
-        self.declare_parameter('posj.home', [-90.0, -20.0, 14.0, -100.0, 0.0, -60.0, -90.0]) # heading to lazer
+        self.declare_parameter('posj.home', [-137.74, -15.00, 12.83, -90.58, -1.86, -75.91, 74.34]) # heading to lazer
         self.workspace_pub = self.create_publisher(MarkerArray, 'workspace_marker', 1)
 
         self.indy = IndyDCP3(self.get_parameter('indy_ip').get_parameter_value().string_value)

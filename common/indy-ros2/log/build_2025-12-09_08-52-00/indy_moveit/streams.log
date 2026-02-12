@@ -1,0 +1,56 @@
+[0.012s] Invoking command in '/root/common/indy-ros2/build/indy_moveit': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_moveit -- -j12 -l12
+[0.045s] Built target ament_cmake_python_copy_indy_moveit
+[0.276s] running egg_info
+[0.277s] writing indy_moveit.egg-info/PKG-INFO
+[0.277s] writing dependency_links to indy_moveit.egg-info/dependency_links.txt
+[0.277s] writing top-level names to indy_moveit.egg-info/top_level.txt
+[0.279s] reading manifest file 'indy_moveit.egg-info/SOURCES.txt'
+[0.284s] writing manifest file 'indy_moveit.egg-info/SOURCES.txt'
+[0.298s] Built target ament_cmake_python_build_indy_moveit_egg
+[0.306s] Invoked command in '/root/common/indy-ros2/build/indy_moveit' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --build /root/common/indy-ros2/build/indy_moveit -- -j12 -l12
+[0.327s] Invoking command in '/root/common/indy-ros2/build/indy_moveit': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_moveit
+[0.328s] -- Install configuration: ""
+[0.328s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch
+[0.328s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/moveit.launch.py
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/indy_moveit_real_robot.launch.py
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//launch/indy_moveit_gazebo.launch.py
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/controllers_6dof.yaml
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/ompl_planning.yaml
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/controllers_7dof.yaml
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/indy_servo.yaml
+[0.329s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//moveit_config/kinematics.yaml
+[0.330s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config
+[0.330s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config/indy_moveit.rviz
+[0.330s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//rviz_config/indy_servo.rviz
+[0.331s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf
+[0.331s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf/indy.srdf.xacro
+[0.331s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit//srdf/indy_macro.srdf.xacro
+[0.331s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/pythonpath.sh
+[0.331s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/pythonpath.dsv
+[0.332s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info
+[0.332s] -- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.332s] -- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/PKG-INFO
+[0.332s] -- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.332s] -- Installing: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit-1.0.0-py3.10.egg-info/top_level.txt
+[0.333s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit
+[0.333s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/__init__.py
+[0.333s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit/launch_common.py
+[0.351s] Listing '/root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/indy_moveit'...
+[0.354s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/local/lib/python3.10/dist-packages/launch_common.py
+[0.382s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/package_run_dependencies/indy_moveit
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/parent_prefix_path/indy_moveit
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/ament_prefix_path.sh
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/ament_prefix_path.dsv
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/path.sh
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/environment/path.dsv
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.bash
+[0.383s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.sh
+[0.384s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.zsh
+[0.385s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/local_setup.dsv
+[0.385s] -- Installing: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/package.dsv
+[0.385s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/ament_index/resource_index/packages/indy_moveit
+[0.385s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/cmake/indy_moveitConfig.cmake
+[0.385s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/cmake/indy_moveitConfig-version.cmake
+[0.385s] -- Up-to-date: /root/common/indy-ros2/install/indy_moveit/share/indy_moveit/package.xml
+[0.386s] Invoked command in '/root/common/indy-ros2/build/indy_moveit' returned '0': AMENT_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/common/indy-ros2/install/indy_description:/opt/ros/humble /usr/bin/cmake --install /root/common/indy-ros2/build/indy_moveit
